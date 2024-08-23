@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    overflow-x: hidden;
+    background: #fff;
+    min-height: 100vh;
+}
+#pagina{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 50px;
+    z-index: 10000;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.5rem;
+}
+#pagina #logo{
+    position: relative;
+    top: 0%;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: #bfbfbf 2px 2px 2px;
+}
+#pagina ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+#pagina ul li{
+    list-style: none;
+    margin-left: 20px;
+}
+#pagina ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 0 1rem;
+    text-shadow: #bfbfbf 2px 2px 2px;
+}
+#particles-js{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 0% 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: grab;
+    background: #000000;
+}
+#particles-js #text{
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    color: #fff;
+    text-shadow: #000 2px 2px 2px;
+    font-family: "Rancho", cursive;
+    user-select: none;
+}
+#particles-js article{
+    display: flex;
+}
+#particles-js article img{
+    border-radius: 50%; 
+    border: #fff 5px groove; 
+    margin: 0 7rem;
+}
+#particles-js #text h2{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+#particles-js #text h1{
+    font-size: 9rem;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-family: "Rancho", cursive;
+}
+.botao{
+    width: 100px;
+    height: 50px;
+    border: #fff 1px solid;
+    border-radius: 15px;
+    background-color: #00000000;
+    color:#fff;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+.botao:hover{
+    background-color: gold;
+    box-shadow: 0 0 5px #ffffff, 0 0 20px #ffffff, 0 0 80px #ffffff;
+    color:#000000;
+}
+.sec{
+    position: relative;
+    padding: 10%;
+    text-align: center;
+    background: #333;
+    color: #fff;
+    z-index: 2;
+}
+.sec h2{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+}
+.sec article{
+    text-align: center;
+    margin: 2rem;
+}
+.sec aside{
+    margin-bottom: 5rem;
+}
+.sec p{    
+    font-size: 1em;
+} 
+.sec .vida{
+    width: 75%;
+}
+.projetos {
+    border-bottom: #fff 1px solid;
+}
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24vh;
+    color: #333;
+}
+.container{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    background: #555555;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 50px;
+    margin: 40px;
+    overflow-x: scroll;
+}
+.container .cartao{
+    width: 256px;
+    height: 352px;
+    box-shadow: inset 5px 5px 5px rgba(0,0,0,0.2),
+                inset -5px -5px 15px rgba(255, 255, 255,0.1),
+                5px 5px 15px rgba(0,0,0,0.3),
+                -5px -5px 15px rgba(255, 255, 255,0.1);
+    border-radius: 15px;
+    margin: 30px;
+    padding: 16px;
+}
+.container .cartao .folheto{
+    width: 230px;
+    height: 317px;
+    background: linear-gradient(-45deg,rgba(0, 0, 0,0.7),rgba(51, 51, 51,1),rgba(0, 0, 0,0.09));
+    border-radius: 15px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.container .cartao .folheto::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    pointer-events: none;
+}
+.container .cartao .folheto:hover{/*TODO aplicar Vanilla.js*/
+    transform: translateY(-30px);
+    background: linear-gradient(-45deg,rgba(0, 0, 0,0.7),rgba(51, 51, 51,1),rgba(0, 0, 0,0.25));
+    border: #555 1px solid;
+    box-shadow: 0 40px 70px rgba(0,0,0,0.5);
+}
+.container .cartao .folheto .conteudo {
+    padding: 20px;
+    text-align: center;   
+}
+.container .cartao .folheto .conteudo h2{
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(255,255,255,0.05);
+}
+.container .cartao .folheto .conteudo h3{
+    font-size: 1.8em;
+    color: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+    transition: .5s;
+}
+.container .cartao .folheto .conteudo p{
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+    transition: .5s;
+}
+.container .cartao .folheto .conteudo a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: green;
+    margin-top: 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+#habilidades {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.skills{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow-x: scroll;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 20px 50px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-image: initial;
+    background: #555555;
+    padding: 30px 20px 80px;
+}
+.skills .conteudo{
+    position: relative;
+    margin: 10px;
+    color: #000000;
+    background: #fff;
+    border-radius: 15px;
+    border: #000 1px solid;
+    box-shadow: 0 40px 70px rgba(0,0,0,0.5);
+    transition: .5s ease-in;
+}
+.skills .conteudo:hover{
+    cursor: pointer;
+    background: #333333;
+    transform: scale(1.04);
+    color: #ffffff;
+    border: #ffffff 1px solid;
+    box-shadow: 0 20px 50px rgba(0,0,0,1);
+}
+
+.skills .conteudo::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    border-radius: 15px 0 0 15px;
+    background: transparent;
+}
+.skills .conteudo .folha .slogan{
+    padding: 20px;
+    width: 200px;
+    height: 275px;
+    text-align: center;   
+}
+.skills .conteudo .folha .slogan h2{
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8em;
+    color: rgba(255,255,255,0.05);
+}
+.skills .conteudo .folha .slogan h3{
+    font-size: 1.8em;
+    z-index: 1;
+    transition: .5s;
+}
+.skills .conteudo .folha .slogan p{
+    font-size: 16px;
+    font-weight: 300;
+    z-index: 1;
+    transition: .5s;
+}
+.skills .conteudo .folha .slogan a{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: green;
+    margin-top: 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+.sumario {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-170%);
+    border-top: 1px solid rgb(191, 191, 191);
+    padding: 10px 50px 0px;
+}
+.indice {
+    width: 100px;
+    color: rgb(255, 255, 255);
+    background: transparent;
+    padding: 2px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    border-image: initial;
+}
+.indice:hover{
+    background: green;
+}
+footer {
+    position: relative;
+    margin-top: 10%;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background-color: #272727;
+    box-shadow: inset 0 1px 10px #000;
+}
+footer a{
+    text-decoration: none;
+    color: #fff;
+}
+footer img {
+    border-radius: 50%;
+    transform: translateY(30%);
+}
+@keyframes expandir{
+    from{
+        width: 0px;
+        height: 0px;
+        background-color: #00000000;
+    }
+    to{
+        width: 100px;
+        height: 50px;
+        background-color: #ffffff;
+        color: #000000;
+    }
+}
+@media(max-width: 764px){
+    #pagina{
+        padding: 15px 25px;
+    }
+    #pagina #logo{
+        transform: translateY(-50%);
+        font-size: 100%;
+        
+    }
+    #pagina ul{
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    #pagina ul li a{
+        font-size: 90%;
+        text-decoration: none;
+        padding: 3px 10px;
+        color: #fff;
+        text-shadow: #000 2px 2px 2px;
+        border-radius: 20px;
+    }
+    section #text{
+        top: 25%;
+    }
+
+}
