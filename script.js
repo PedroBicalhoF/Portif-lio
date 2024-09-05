@@ -1,4 +1,8 @@
 const nome = document.getElementById('text');
+const conhecimentos = document.getElementById('conhecimentos');
+const linguagem = document.getElementById('linguagem');
+const biblioteca = document.getElementById('biblioteca');
+const ferramenta = document.getElementById('ferramenta');
 
 window.addEventListener('scroll', function(){
     if(this.window.scrollY < 1200){
@@ -7,7 +11,27 @@ window.addEventListener('scroll', function(){
         nome.style.opacity = 1 - (value/200);
         nome.style.top = 30 + value * 0.05 + '%';
     }
-})
+});
+
+linguagem.addEventListener('click', () =>{
+  conhecimentos.style.justifyContent = 'left'
+});
+
+biblioteca.addEventListener('click', () =>{
+  conhecimentos.style.justifyContent = 'center'
+});
+
+ferramenta.addEventListener('click', () =>{
+  conhecimentos.style.justifyContent = 'right'
+});
+
+VanillaTilt.init(document.querySelectorAll(".folheto"),{
+  max: 20,
+  speed: 600,
+  easing: 'cubic-bezier(.03,.98,.52,.99)',
+  perspective: 500,
+  transition: true
+});
 
 particlesJS(
   {
@@ -23,7 +47,7 @@ particlesJS(
         "value": "#1a1a1a"
       },
       "shape": {
-        "type": "edge",
+        "type": "star",
         "stroke": {
           "width": 1,
           "color": "cyan"
@@ -48,7 +72,7 @@ particlesJS(
         }
       },
       "size": {
-        "value": 7,
+        "value": 3,
         "random": true,
         "anim": {
           "enable": false,
@@ -120,3 +144,4 @@ particlesJS(
     },
     "retina_detect": true
   });
+
